@@ -1,6 +1,37 @@
 ics
 ==================
 
+## Fork
+> Project forked to make package available for usage via CDN from [JSDelivr](https://jsdelivr.com/).
+>
+> All dependencies are bundled.
+>
+> In case of using with bundler - please use original [ics](https://www.npmjs.com/package/ics) package.
+
+#### CDN usage
+1) Using CDN
+```html
+    <script src="https://cdn.jsdelivr.net/npm/@kusyka911/ics/dist/bundled/index.umd.js"></script>
+    <script>
+        const ics = window.ICS;
+        async function handleDownload() {
+            // ...
+        }
+    </script>
+```
+
+2) CDN + ES import
+```html
+    <script type="module">
+      import * as ics from 'https://cdn.jsdelivr.net/npm/@kusyka911/ics/dist/bundled/index.es.js';
+      async function handleDownload() {
+          // ...
+      }
+    </script>
+```
+
+> See detailed usage examples bellow.
+
 The [iCalendar](http://tools.ietf.org/html/rfc5545) generator
 
 [![npm version](https://badge.fury.io/js/ics.svg)](http://badge.fury.io/js/ics)
