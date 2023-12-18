@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var babel = require('gulp-babel');
+var umd = require('gulp-umd');
 
 var paths = {
   src: 'src/**/*.js',
@@ -14,6 +15,7 @@ gulp.task('watch', function() {
 gulp.task('build', function () {
   return gulp.src(paths.src)
     .pipe(babel())
+    .pipe(umd())
     .pipe(gulp.dest(paths.dest));
 });
 
