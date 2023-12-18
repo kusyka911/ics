@@ -1,6 +1,6 @@
 {
   "name": "@kusyka911/ics",
-  "version": "3.7.1-build.7",
+  "version": "3.7.1+build.7",
   "description": "iCal (ics) file generator",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
@@ -17,7 +17,7 @@
     "build": "rm -r dist; gulp build",
     "vite": "vite",
     "vite:build": "vite build",
-    "vite:dist": "vite build; vite build --mode=bundled"
+    "vite:dist": "rm -rf dist; vite build; vite build --mode=bundled"
   },
   "repository": {
     "type": "git",
