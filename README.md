@@ -4,7 +4,7 @@ ics
 The [iCalendar](http://tools.ietf.org/html/rfc5545) generator
 
 [![npm version](https://badge.fury.io/js/ics.svg)](http://badge.fury.io/js/ics)
-[![TravisCI build status](https://travis-ci.org/adamgibbons/ics.svg?branch=master)](https://travis-ci.org/adamgibbons/ics.svg?branch=master)
+[![CI](https://github.com/adamgibbons/ics/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/adamgibbons/ics/actions/workflows/build.yml)
 [![Downloads](https://img.shields.io/npm/dm/ics.svg)](http://npm-stat.com/charts.html?package=ics)
 
 ## Install
@@ -91,6 +91,13 @@ ics.createEvent({
   }
 
   writeFileSync(`${__dirname}/event.ics`, value)
+
+/*
+You cannot use fs in Frontend libraries like React so you rather import a module to save files to the browser as follow [  import { saveAs } from 'file-saver'; // For saving the file in the browser]
+const blob = new Blob([value], { type: 'text/calendar' });
+        saveAs(blob, `${title}.ics`);
+
+*/
 })
 ```
 
